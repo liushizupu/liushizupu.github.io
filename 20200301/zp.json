@@ -1,0 +1,1613 @@
+{
+    "persons": [
+        {
+            "levelInitial ": 13,
+            "name": "劉文煇",
+            "spouses": [
+                "徐氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士緝",
+                    "zi": "方舟",
+                    "spouses": [
+                        "郭氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志異",
+                            "spouses": [
+                                "王氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光筌",
+                                    "spouses": [
+                                        "周氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之貴",
+                                            "spouses": [
+                                                "徐氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰發"
+                                                },
+                                                {
+                                                    "name": "長發"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "之清",
+                                            "spouses": [
+                                                "殷氏"
+                                            ]
+                                        },
+                                        {
+                                            "name": "之富",
+                                            "spouses": [
+                                                "謝氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰鈞"
+                                                },
+                                                {
+                                                    "name": "曰有"
+                                                },
+                                                {
+                                                    "name": "曰義"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "remark": "遷居唐縣鎮"
+                                },
+                                {
+                                    "name": "光笏",
+                                    "spouses": [
+                                        "楊氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之高",
+                                            "spouses": [
+                                                "楊氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "天明"
+                                                },
+                                                {
+                                                    "name": "天喜"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "remark": "遷居唐縣鎮"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "志虎",
+                            "spouses": [
+                                "李氏"
+                            ]
+                        },
+                        {
+                            "name": "志太"
+                        },
+                        {
+                            "name": "志元",
+                            "spouses": [
+                                "張氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光映",
+                                    "spouses": [
+                                        "伍氏"
+                                    ]
+                                },
+                                {
+                                    "name": "光丙"
+                                },
+                                {
+                                    "name": "光務"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "志詳",
+                            "spouses": [
+                                "浦氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光運",
+                                    "spouses": [
+                                        "田氏",
+                                        "張氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之炳(養子)",
+                                            "childrens": [
+                                                {
+                                                    "name": "曰錦",
+                                                    "spouses": [
+                                                        "王氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正志",
+                                                            "spouses": [
+                                                                "陳氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大平"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "正慾",
+                                                            "spouses": [
+                                                                "張氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大遠",
+                                                                    "spouses": [
+                                                                        "吳氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "邵澤",
+                                                                            "spouses": [
+                                                                                "徐氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖金",
+                                                                                    "spouses": [
+                                                                                        "陳氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉煇"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "劉超"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖建",
+                                                                                    "spouses": [
+                                                                                        "王氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉洋"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖德",
+                                                                                    "spouses": [
+                                                                                        "胡氏"
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "remark": "嗣子曰錦係文周公房之棟之次子"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "光點",
+                                    "spouses": [
+                                        "張氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之貞"
+                                        },
+                                        {
+                                            "name": "之富"
+                                        },
+                                        {
+                                            "name": "之德",
+                                            "spouses": [
+                                                "余氏",
+                                                "王氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰春",
+                                                    "spouses": [
+                                                        "王氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正燦"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "之節",
+                                            "spouses": [
+                                                "顏氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰渚",
+                                                    "spouses": [
+                                                        "張氏",
+                                                        "李氏"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "光中"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "士產",
+                    "spouses": [
+                        "王氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志奇"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文著",
+            "spouses": [
+                "楊氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士斌",
+                    "spouses": [
+                        "李氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志鳳",
+                            "spouses": [
+                                "楊氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光書"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "明傑",
+            "spouses": [
+                "徐氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士育"
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "劉文連",
+            "zi": "樂一",
+            "spouses": [
+                "陳氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士統",
+                    "spouses": [
+                        "毛氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志科",
+                            "spouses": [
+                                "郭氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光享",
+                                    "spouses": [
+                                        "葉氏"
+                                    ],
+                                    "remark": "子之棫，失考"
+                                },
+                                {
+                                    "name": "光春"
+                                }
+                            ],
+                            "remark": "子三：三子光選承志順公嗣"
+                        }
+                    ]
+                },
+                {
+                    "name": "士倫",
+                    "spouses": [
+                        "蔡氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志舉",
+                            "spouses": [
+                                "王氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光現"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "士領",
+                    "spouses": [
+                        "儸氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志順",
+                            "spouses": [
+                                "陳氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光選",
+                                    "spouses": [
+                                        "張氏"
+                                    ]
+                                }
+                            ],
+                            "remark": "嗣子光選，失考"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "劉文詳",
+            "spouses": [
+                "史氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士富"
+                },
+                {
+                    "name": "士容"
+                },
+                {
+                    "name": "士寅"
+                },
+                {
+                    "name": "四幺"
+                }
+            ],
+            "remark": "共有四子，一同遷居隨州沙河店"
+        },
+        {
+            "levelInitial ": 13,
+            "name": "劉文周",
+            "spouses": [
+                "李氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士界",
+                    "spouses": [
+                        "陳氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志囯",
+                            "spouses": [
+                                "張氏"
+                            ]
+                        },
+                        {
+                            "name": "志遠",
+                            "spouses": [
+                                "沈氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光敏",
+                                    "spouses": [
+                                        "王氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之柱",
+                                            "spouses": [
+                                                "張氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰勳",
+                                                    "spouses": [
+                                                        "潘氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正思",
+                                                            "spouses": [
+                                                                "陶氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大落",
+                                                                    "spouses": [
+                                                                        "陶氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹維",
+                                                                            "spouses": [
+                                                                                "胡氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖春",
+                                                                                    "zi": "木平",
+                                                                                    "spouses": [
+                                                                                        "錢氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "軍明"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "保軍"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖坤",
+                                                                                    "zi": "清平",
+                                                                                    "spouses": [
+                                                                                        "熊氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉斌"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "劉佳"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "劉凱"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "紹謀",
+                                                                            "spouses": [
+                                                                                "王氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖凱",
+                                                                                    "spouses": [
+                                                                                        "王氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "紅軍"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "小軍"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖勝",
+                                                                                    "spouses": [
+                                                                                        "李氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉潔"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "劉哲"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖發",
+                                                                                    "spouses": [
+                                                                                        "陳氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉冬"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "曰敬",
+                                                    "spouses": [
+                                                        "張氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正心",
+                                                            "spouses": [
+                                                                "劉氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大永",
+                                                                    "spouses": [
+                                                                        "張氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "劉",
+                                                                            "spouses": [
+                                                                                "仁貴"
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "remark": "女一招贅(仁貴)"
+                                                                },
+                                                                {
+                                                                    "name": "大修",
+                                                                    "spouses": [
+                                                                        "曾氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹雍",
+                                                                            "zi": "咬臍",
+                                                                            "spouses": [
+                                                                                "潘氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "厚平"
+                                                                                },
+                                                                                {
+                                                                                    "name": "燿平"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "正惠",
+                                                            "spouses": [
+                                                                "王氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大增",
+                                                                    "spouses": [
+                                                                        "陳氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹瓊",
+                                                                            "zi": "俊清",
+                                                                            "spouses": [
+                                                                                "郭氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "劉露"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "紹偉",
+                                                                            "zi": "華清",
+                                                                            "spouses": [
+                                                                                "張氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "劉威"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "喜元"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "之棟",
+                                            "spouses": [
+                                                "陳氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰魁",
+                                                    "spouses": [
+                                                        "陳氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正懋",
+                                                            "spouses": [
+                                                                "熊氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大和"
+                                                                },
+                                                                {
+                                                                    "name": "大鵬",
+                                                                    "spouses": [
+                                                                        "熊氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹友",
+                                                                            "spouses": [
+                                                                                "胡氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖財",
+                                                                                    "spouses": [
+                                                                                        "陳氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉練"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "劉雷"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖寳",
+                                                                                    "spouses": [
+                                                                                        "熊氏"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖富",
+                                                                                    "spouses": [
+                                                                                        "王氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉康"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "小平"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "紹發",
+                                                                            "spouses": [
+                                                                                "徐氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "艷平"
+                                                                                },
+                                                                                {
+                                                                                    "name": "亞平"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "正聰",
+                                                            "spouses": [
+                                                                "劉氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大繁",
+                                                                    "spouses": [
+                                                                        "曾氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹儒",
+                                                                            "spouses": [
+                                                                                "熊氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖為",
+                                                                                    "spouses": [
+                                                                                        "潘氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉強"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "學平"
+                                                                                },
+                                                                                {
+                                                                                    "name": "少平"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "大垣",
+                                                                    "spouses": [
+                                                                        "鄒氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹晏",
+                                                                            "spouses": [
+                                                                                "鄒氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖囯",
+                                                                                    "spouses": [
+                                                                                        "徐氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉文"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "劉強"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖輕",
+                                                                                    "spouses": [
+                                                                                        "王氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "劉飛"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "紹彥",
+                                                                            "spouses": [
+                                                                                "潘氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "志勇"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "大梅",
+                                                                    "spouses": [
+                                                                        "潘氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹清",
+                                                                            "spouses": [
+                                                                                "沈氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "志平"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "紹品",
+                                                                            "zi": "銀安",
+                                                                            "spouses": [
+                                                                                "徐氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "志囯"
+                                                                                },
+                                                                                {
+                                                                                    "name": "志紅"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "正恕",
+                                                            "spouses": [
+                                                                "姚氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大彩",
+                                                                    "spouses": [
+                                                                        "張氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹文",
+                                                                            "spouses": [
+                                                                                "李氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "澤明"
+                                                                                },
+                                                                                {
+                                                                                    "name": "夢"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "紹賢",
+                                                                            "spouses": [
+                                                                                "曾氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "劉增"
+                                                                                },
+                                                                                {
+                                                                                    "name": "劉亮"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "紹軍",
+                                                                            "spouses": [
+                                                                                "潘氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "劉繁"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "remark": "次子曰錦承文輝公房之炳公嗣"
+                                        }
+                                    ],
+                                    "remark": "子三"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "士昌",
+                    "spouses": [
+                        "曹氏",
+                        "魏氏"
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文煥",
+            "spouses": [
+                "王氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士守",
+                    "spouses": [
+                        "袁氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志謨",
+                            "spouses": [
+                                "凃氏"
+                            ]
+                        },
+                        {
+                            "name": "志楚",
+                            "spouses": [
+                                "陳氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光敖"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "志韜"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文兆",
+            "spouses": [
+                "吳氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士雄",
+                    "spouses": [
+                        "馮氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志寳",
+                            "childrens": [
+                                {
+                                    "name": "庚",
+                                    "remark": "失考"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "方明",
+                    "spouses": [
+                        "李氏"
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文著",
+            "spouses": [
+                "唐氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士仁",
+                    "spouses": [
+                        "凌氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志周"
+                        },
+                        {
+                            "name": "志成"
+                        }
+                    ]
+                },
+                {
+                    "name": "士高",
+                    "spouses": [
+                        "王氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志謙",
+                            "spouses": [
+                                "郭氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光勳"
+                                },
+                                {
+                                    "name": "冬狗",
+                                    "remark": "失考"
+                                },
+                                {
+                                    "name": "時",
+                                    "remark": "失考"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "志恪"
+                        }
+                    ]
+                },
+                {
+                    "name": "士元",
+                    "spouses": [
+                        "胡氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志悅"
+                        },
+                        {
+                            "name": "志金",
+                            "remark": "失考"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文函",
+            "spouses": [
+                "張氏"
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文質",
+            "childrens": [
+                {
+                    "name": "士收"
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文揚",
+            "zi": "格言",
+            "spouses": [
+                "張氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士彥",
+                    "spouses": [
+                        "胡氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "大中"
+                        },
+                        {
+                            "name": "大元"
+                        },
+                        {
+                            "name": "志毅",
+                            "spouses": [
+                                "李氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光祖",
+                                    "spouses": [
+                                        "劉氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之士",
+                                            "remark": "養子，遷居曾店北，失考"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "光漢"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "士林",
+                    "spouses": [
+                        "葉氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "大合",
+                            "spouses": [
+                                "龍氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光大",
+                                    "childrens": [
+                                        {
+                                            "name": "冬喜",
+                                            "remark": "失考"
+                                        },
+                                        {
+                                            "name": "春喜",
+                                            "remark": "承光盛嗣，失考"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "光盛",
+                                    "childrens": [
+                                        {
+                                            "name": "春喜",
+                                            "remark": "失考"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "remark": "遷居一屋港"
+                        },
+                        {
+                            "name": "大金",
+                            "childrens": [
+                                {
+                                    "name": "光春",
+                                    "remark": "失考"
+                                }
+                            ],
+                            "remark": "遷居一屋港"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文烈",
+            "childrens": [
+                {
+                    "name": "士正"
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文芳",
+            "spouses": [
+                "徐氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士直",
+                    "childrens": [
+                        {
+                            "name": "志龍",
+                            "spouses": [
+                                "龍氏"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文卓",
+            "childrens": [
+                {
+                    "name": "士新",
+                    "remark": "遷居到魏家店"
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文典",
+            "spouses": [
+                "楊氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士俊",
+                    "zi": "智千",
+                    "spouses": [
+                        "陳氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志元",
+                            "zi": "定元",
+                            "spouses": [
+                                "熊氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光浩",
+                                    "spouses": [
+                                        "黃氏"
+                                    ]
+                                },
+                                {
+                                    "name": "光點",
+                                    "spouses": [
+                                        "施氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之棠",
+                                            "spouses": [
+                                                "潘氏"
+                                            ]
+                                        },
+                                        {
+                                            "name": "之漢",
+                                            "spouses": [
+                                                "陳氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰當",
+                                                    "spouses": [
+                                                        "黃氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正有",
+                                                            "spouses": [
+                                                                "王氏"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "正安",
+                                                            "spouses": [
+                                                                "劉氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大松"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "曰常",
+                                                    "spouses": [
+                                                        "方氏"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "之淮",
+                                            "spouses": [
+                                                "張氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰高",
+                                                    "spouses": [
+                                                        "張氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正富",
+                                                            "spouses": [
+                                                                "龍氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大考",
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹岳",
+                                                                            "spouses": [
+                                                                                "張氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖章",
+                                                                                    "zi": "哈巴"
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖銀",
+                                                                                    "spouses": [
+                                                                                        "陶氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "平平"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ],
+                                                                            "remark": "嗣子"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "remark": "次子大山承正坤嗣"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "光三"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "志享",
+                            "spouses": [
+                                "鄔氏"
+                            ]
+                        },
+                        {
+                            "name": "志成",
+                            "zi": "定成",
+                            "spouses": [
+                                "劉氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光朝",
+                                    "remark": "遷居吳山三合店"
+                                }
+                            ]
+                        }
+                    ],
+                    "remark": "三子志義承士異公嗣"
+                }
+            ]
+        },
+        {
+            "levelInitial ": 13,
+            "name": "文謨",
+            "spouses": [
+                "劉氏"
+            ],
+            "childrens": [
+                {
+                    "name": "士異",
+                    "zi": "勝千",
+                    "spouses": [
+                        "鄒氏"
+                    ],
+                    "childrens": [
+                        {
+                            "name": "志義",
+                            "spouses": [
+                                "孫氏"
+                            ],
+                            "childrens": [
+                                {
+                                    "name": "光林",
+                                    "zi": "萬盈",
+                                    "spouses": [
+                                        "熊氏"
+                                    ],
+                                    "childrens": [
+                                        {
+                                            "name": "之容",
+                                            "spouses": [
+                                                "熊氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰德",
+                                                    "spouses": [
+                                                        "張氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正榮",
+                                                            "spouses": [
+                                                                "張氏"
+                                                            ],
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大明"
+                                                                },
+                                                                {
+                                                                    "name": "大海",
+                                                                    "spouses": [
+                                                                        "張氏"
+                                                                    ],
+                                                                    "childrens": [
+                                                                        {
+                                                                            "name": "紹清",
+                                                                            "spouses": [
+                                                                                "姚氏"
+                                                                            ],
+                                                                            "remark": "女一"
+                                                                        },
+                                                                        {
+                                                                            "name": "紹漢",
+                                                                            "spouses": [
+                                                                                "王氏"
+                                                                            ],
+                                                                            "childrens": [
+                                                                                {
+                                                                                    "name": "祖厚",
+                                                                                    "spouses": [
+                                                                                        "張氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "金如",
+                                                                                            "spouses": [
+                                                                                                "江氏"
+                                                                                            ],
+                                                                                            "remark": "女一"
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "金燕",
+                                                                                            "spouses": [
+                                                                                                "徐氏"
+                                                                                            ],
+                                                                                            "childrens": [
+                                                                                                {
+                                                                                                    "name": "雪松"
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "金紅"
+                                                                                        }
+                                                                                    ],
+                                                                                    "remark": "遷居遠安縣城"
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖傳",
+                                                                                    "spouses": [
+                                                                                        "嚴氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "金堂"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "name": "祖家",
+                                                                                    "spouses": [
+                                                                                        "岳氏"
+                                                                                    ],
+                                                                                    "childrens": [
+                                                                                        {
+                                                                                            "name": "紅衛"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "remark": "三子紹岳承大考公嗣"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "正起",
+                                                            "spouses": [
+                                                                "李氏"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "曰安",
+                                                    "spouses": [
+                                                        "李氏"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "之易",
+                                            "spouses": [
+                                                "王氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰申"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "之福",
+                                            "spouses": [
+                                                "何氏"
+                                            ],
+                                            "childrens": [
+                                                {
+                                                    "name": "曰發"
+                                                },
+                                                {
+                                                    "name": "曰奎",
+                                                    "spouses": [
+                                                        "姚氏"
+                                                    ],
+                                                    "childrens": [
+                                                        {
+                                                            "name": "正坤",
+                                                            "childrens": [
+                                                                {
+                                                                    "name": "大山",
+                                                                    "remark": "嗣子"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "光灼"
+                                },
+                                {
+                                    "name": "光煥"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
