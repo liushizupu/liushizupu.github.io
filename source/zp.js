@@ -2,7 +2,7 @@ var json = {
     "levelMap": "明世敬班甫瓊元其宗囯命一文士志光之曰正大紹祖存忠厚長傳積善家敦行為道德富貴定榮華修齊能達用學問可成名謹守詩書訓方穪奎壁英",
     "persons": [
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文煇",
             "spouses": [
                 "徐氏"
@@ -286,7 +286,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文著",
             "spouses": [
                 "楊氏"
@@ -314,7 +314,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "明傑",
             "spouses": [
                 "徐氏"
@@ -326,7 +326,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文連",
             "zi": "樂一",
             "spouses": [
@@ -405,7 +405,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文詳",
             "spouses": [
                 "史氏"
@@ -427,7 +427,7 @@ var json = {
             "remark": "共有四子，一同遷居隨州沙河店"
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文周",
             "spouses": [
                 "李氏"
@@ -965,7 +965,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文煥",
             "spouses": [
                 "王氏"
@@ -1002,7 +1002,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文兆",
             "spouses": [
                 "吳氏"
@@ -1034,7 +1034,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文著",
             "spouses": [
                 "唐氏"
@@ -1102,14 +1102,14 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文函",
             "spouses": [
                 "張氏"
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文質",
             "childrens": [
                 {
@@ -1118,7 +1118,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文揚",
             "zi": "格言",
             "spouses": [
@@ -1214,7 +1214,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文烈",
             "childrens": [
                 {
@@ -1223,7 +1223,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文芳",
             "spouses": [
                 "徐氏"
@@ -1243,7 +1243,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文卓",
             "childrens": [
                 {
@@ -1253,7 +1253,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文典",
             "spouses": [
                 "楊氏"
@@ -1416,7 +1416,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文謨",
             "spouses": [
                 "劉氏"
@@ -1611,7 +1611,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文思",
             "spouses": [
                 "潘氏"
@@ -1697,7 +1697,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文廷",
             "spouses": [
                 "李氏"
@@ -1813,7 +1813,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文第",
             "spouses": [
                 "葉氏"
@@ -1901,7 +1901,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文策",
             "spouses": [
                 "張氏"
@@ -1938,7 +1938,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文笏",
             "spouses": [
                 "吳氏"
@@ -1982,7 +1982,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文經",
             "spouses": [
                 "曾氏"
@@ -3005,7 +3005,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文純",
             "zi": "不二",
             "spouses": [
@@ -3083,7 +3083,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文編",
             "zi": "易三",
             "spouses": [
@@ -3601,7 +3601,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文繹",
             "zi": "敦七",
             "spouses": [
@@ -3793,7 +3793,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文華",
             "zi": "厚載",
             "spouses": [
@@ -3881,7 +3881,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文載",
             "spouses": [
                 "黃氏"
@@ -3901,7 +3901,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文炳",
             "zi": "持載",
             "spouses": [
@@ -3999,7 +3999,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文煌",
             "zi": "明載",
             "spouses": [
@@ -4033,7 +4033,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文興",
             "zi": "有載",
             "spouses": [
@@ -4081,7 +4081,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文鬱",
             "zi": "有邦",
             "spouses": [
@@ -4445,7 +4445,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "博載",
             "spouses": [
                 "王氏"
@@ -4466,7 +4466,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "成載",
             "spouses": [
                 "李氏"
@@ -4511,7 +4511,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "容載",
             "spouses": [
                 "張氏"
@@ -4532,7 +4532,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "覆載",
             "spouses": [
                 "劉氏"
@@ -4581,7 +4581,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "耕載",
             "spouses": [
                 "王氏"
@@ -4598,7 +4598,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "文啓",
             "spouses": [
                 "王氏"
@@ -4623,7 +4623,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文元",
             "zi": "渭載",
             "spouses": [
@@ -4651,7 +4651,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文斐",
             "spouses": [
                 "王氏"
@@ -4709,7 +4709,7 @@ var json = {
             ]
         },
         {
-            "levelInitial ": 13,
+            "levelInitial": 13,
             "name": "劉文明",
             "zi": "智載",
             "spouses": [

@@ -3,25 +3,11 @@
 
 <head>
     <title>刘氏族谱</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="source/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    </div>
     <div class="tabs-content toptable">
-        <div class="toolbar-wrap">
-            <div class="toolbar">
-                <div class="l-list">
-                    <ul class="icon-list">
-                        <li><a class="list" href="javascript:;" onclick="editPop(0,0);"><i class="fa fa-plus"
-                                    aria-hidden="true"></i><span>新增一级地区</span></a></li>
-                        <li><a class="list" href="javascript:;" onclick="refresh('#tblist');"><i class="fa fa-refresh"
-                                    aria-hidden="true"></i><span>刷新列表</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="line20"></div>
         <table id="tbContainer" class="ltable">
             <thead>
                 <tr>
@@ -37,7 +23,15 @@
         </table>
     </div>
     <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="zp.js"></script>
+    <script type="text/javascript" src="source/zp.js"></script>
+    <script type="text/javascript">
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    </script>
+
     <script type="text/javascript">
         var maxLevel = 2;   //声明最大层级
         var placeholderCache = [];
@@ -45,7 +39,7 @@
         function calcLevel(data, level) {
             if (data.levelInitial) {
                 // 备份从13开始
-                data.level = data.levelInitial - 12;
+                data.level = data.levelInitial;
             } else {
                 data.level = level;
             }
@@ -71,30 +65,32 @@
                 placeholder = '<span style="display: inline-block; width: 10px;"></span>' + placeholder;
             }
             placeholderCache[index] = placeholder;
-            //console.log("calcPlaceholder" + index);
             return placeholder;
         }
 
-        function render($container, data) {
+        function render($container, data, level) {
             //debugger
-            var placeholder = calcPlaceholder(data.level);
+            var placeholder = calcPlaceholder(level);
 
-
-            var $tr = $('<tr>'
+            var $tr = $('<tr data-level="' + data.level + '">'
                 + '<td align="left">'
                 + placeholder
                 + '<span class="folder-open"></span>' + data.name + '</td>'
                 + '<td>' + (data.zi ? data.zi : '') + '</td>'
                 + '<td>' + (data.spouses ? data.spouses.join(',') : '') + '</td>'
-                + '<td>' + (json.levelMap[data.level + 12 - 1]) + "(" + (data.level + 12) + ")" + '</td>'
+                + '<td>' + (json.levelMap[data.level - 1]) + "(" + data.level + ")" + '</td>'
                 + '<td>' + (data.childrens ? data.childrens.length : 0) + '人</td>'
                 + '<td>' + (data.remark ? data.remark : '') + '</td>'
                 + '</tr>');
 
             //初始化节点状态
-            $tr.data('expand', true)
-                .data('level', data.level)
+            $tr.data('expand', false)
                 .data('name', data.name);
+            if (level != 1) {
+                $tr.css("display", "none")
+            }
+
+
 
             // if (this.Level == maxLevel) {
             //     $tr.addClass('leaf');
@@ -114,7 +110,7 @@
                 return;
             }
             for (var i = 0; i < data.childrens.length; i++) {
-                render($container, data.childrens[i]);
+                render($container, data.childrens[i], level + 1);
             }
         }
 
@@ -124,15 +120,22 @@
             }
 
             var $container = $('#tbContainer tbody');
-            console.log(json.persons);
             for (var i = 0; i < json.persons.length; i++) {
-                render($container, json.persons[i]);
+                render($container, json.persons[i], 1);
             }
 
-            // analysisAreaData(json.persons);
+            var level = parseInt(getQueryString('level'));
+            if (level) {
+                $container.find('tr').hide();
+                $container.find('tr[data-level="' + (level + 1) + '"]').show();
+            }
 
             //getAreaList(0);
+            init();
 
+        });
+
+        function init() {
             $('#tbContainer tbody').on('click', 'tr:not(.leaf)', function () {
                 var $tr = $(this);
                 //树为闭合状态，则移除孩子节点
@@ -160,23 +163,6 @@
             //阻止a标签冒泡事件
             $('#tbContainer tbody').on("click", "a", function (e) {
                 e.stopPropagation();
-            })
-        });
-
-        /**
-         * 获取区域列表
-         **
-         * @param {int} pid 父节点id
-         * @param {int} level 区域级别
-         */
-        function getAreaList(pid) {
-            $.ajax({
-                url: "zp.json", //json文件位置
-                type: "GET", //请求方式为get
-                dataType: "json", //返回数据格式为json
-                success: function (data) { //请求成功完成后要执行的方法 
-                    console.log(data);
-                }
             })
         }
 
@@ -237,18 +223,6 @@
                     $container.append($tr);
                 }
             });
-        }
-
-
-        var isLoad = true;
-        /**
-         * 刷新页面， 兼容弹窗请求回掉方法
-         */
-        function btnsearch() {
-            if (!isLoad) {
-                refresh();
-            }
-            isLoad &= false;
         }
     </script>
 </body>

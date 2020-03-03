@@ -3,253 +3,56 @@
 
 <head>
     <title>刘氏族谱</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+<link href="source/style.css" rel="stylesheet" type="text/css" />
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    .row {
+        text-align: center;
+    }
+
+    .cell {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 5px 10px;
+        cursor: pointer;
+    }
+
+    .cell:hover {
+        color: red;
+    }
+</style>
 
 <body>
-    </div>
-    <div class="tabs-content toptable">
-        <div class="toolbar-wrap">
-            <div class="toolbar">
-                <div class="l-list">
-                    <ul class="icon-list">
-                        <li><a class="list" href="javascript:;" onclick="editPop(0,0);"><i class="fa fa-plus"
-                                    aria-hidden="true"></i><span>新增一级地区</span></a></li>
-                        <li><a class="list" href="javascript:;" onclick="refresh('#tblist');"><i class="fa fa-refresh"
-                                    aria-hidden="true"></i><span>刷新列表</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="line20"></div>
-        <table id="tbContainer" class="ltable">
-            <thead>
-                <tr>
-                    <th>名称</th>
-                    <th>字</th>
-                    <th>配偶</th>
-                    <th>辈分</th>
-                    <th>后人</th>
-                    <th>备注</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+    <h1>刘氏族谱</h1>
+    <hr>
+    <div class="container"></div>
     </div>
     <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="zp.js"></script>
+    <script type="text/javascript" src="source/zp.js"></script>
     <script type="text/javascript">
-        var maxLevel = 2;   //声明最大层级
-        var placeholderCache = [];
-
-        function calcLevel(data, level) {
-            if (data.levelInitial) {
-                // 备份从13开始
-                data.level = data.levelInitial - 12;
-            } else {
-                data.level = level;
-            }
-            if (!data.childrens) {
-                return;
-            }
-            for (var i = 0; i < data.childrens.length; i++) {
-                calcLevel(data.childrens[i], data.level + 1);
-            }
-        }
-
-        function calcPlaceholder(level) {
-            var index = level;
-            if (placeholderCache[index]) {
-                return placeholderCache[index];
-            }
-
-            var placeholder = '';
-            if (level > 1) {
-                placeholder += '<span class="folder-line"></span>';
-            }
-            while (--level > 0) {
-                placeholder = '<span style="display: inline-block; width: 10px;"></span>' + placeholder;
-            }
-            placeholderCache[index] = placeholder;
-            //console.log("calcPlaceholder" + index);
-            return placeholder;
-        }
-
-        function render($container, data) {
-            //debugger
-            var placeholder = calcPlaceholder(data.level);
-
-
-            var $tr = $('<tr>'
-                + '<td align="left">'
-                + placeholder
-                + '<span class="folder-open"></span>' + data.name + '</td>'
-                + '<td>' + (data.zi ? data.zi : '') + '</td>'
-                + '<td>' + (data.spouses ? data.spouses.join(',') : '') + '</td>'
-                + '<td>' + (json.levelMap[data.level + 12 - 1]) + "(" + (data.level + 12) + ")" + '</td>'
-                + '<td>' + (data.childrens ? data.childrens.length : 0) + '人</td>'
-                + '<td>' + (data.remark ? data.remark : '') + '</td>'
-                + '</tr>');
-
-            //初始化节点状态
-            $tr.data('expand', true)
-                .data('level', data.level)
-                .data('name', data.name);
-
-            // if (this.Level == maxLevel) {
-            //     $tr.addClass('leaf');
-            // }
-            if (!data.childrens) {
-                $tr.addClass('leaf');
-            }
-            // if (isTr) {
-            //     $container.after($tr);
-            //     $container = $tr;
-            // } else {
-            //     $container.append($tr);
-            // }
-            $container.append($tr);
-
-            if (!data.childrens) {
-                return;
-            }
-            for (var i = 0; i < data.childrens.length; i++) {
-                render($container, data.childrens[i]);
-            }
-        }
-
         $(function () {
-            for (var i = 0; i < json.persons.length; i++) {
-                calcLevel(json.persons[i], 1);
-            }
-
-            var $container = $('#tbContainer tbody');
-            console.log(json.persons);
-            for (var i = 0; i < json.persons.length; i++) {
-                render($container, json.persons[i]);
-            }
-
-            // analysisAreaData(json.persons);
-
-            //getAreaList(0);
-
-            $('#tbContainer tbody').on('click', 'tr:not(.leaf)', function () {
-                var $tr = $(this);
-                //树为闭合状态，则移除孩子节点
-                var pid = $tr.data('level');
-                var expand = $tr.data('expand');
-                $tr.data('expand', !expand);
-                console.log(expand)
-                while (true) {
-                    $tr = $tr.next();
-                    console.log($tr.data('level') + $tr.data('name'));
-                    if ($tr.length > 0 && $tr.data('level') > pid) {
-                        //$tr.toggle();
-                        if (expand) {
-                            $tr.hide();
-                        } else {
-                            $tr.show();
-                        }
-                        $tr.data('expand', !expand);
-                    } else {
-                        break;
-                    }
-                }
-            });
-
-            //阻止a标签冒泡事件
-            $('#tbContainer tbody').on("click", "a", function (e) {
-                e.stopPropagation();
-            })
-        });
-
-        /**
-         * 获取区域列表
-         **
-         * @param {int} pid 父节点id
-         * @param {int} level 区域级别
-         */
-        function getAreaList(pid) {
-            $.ajax({
-                url: "zp.json", //json文件位置
-                type: "GET", //请求方式为get
-                dataType: "json", //返回数据格式为json
-                success: function (data) { //请求成功完成后要执行的方法 
-                    console.log(data);
-                }
-            })
-        }
-
-        /**
-         * 区域数据解析
-         **
-         * @param {Array} data 区域数据对象集合
-         * @param {int} pid 容器id
-         */
-        function analysisAreaData(data, pid) {
-            if (data.length <= 0) {
-                return;
-            }
-
-            //判断新的tr新增方式
-            var isTr = true;
-            var $container = $('#tbContainer tr[data-id="' + pid + '"]');
-            if ($container.length <= 0) {
-                isTr = false;
-                $container = $('#tbContainer tbody');
-            }
-
-
-            //计算占位符
-            var curLevel = data[0].Level;
-            var placeholder = '';
-            if (curLevel > 1) {
-                placeholder += '<span class="folder-line"></span>';
-            }
-            while (--curLevel > 0) {
-                placeholder = '<span style="display: inline-block; width: 10px;"></span>' + placeholder;
-            }
-
-            //渲染
-            $.each(data, function () {
-
-
-                var $tr = $('<tr data-id="' + this.ID + '" data-pid="' + pid + '">'
-                    + '<td align="left">'
-                    + placeholder
-                    + '<span class="folder-open"></span>' + this.name + '</td>'
-                    + '<td>' + (this.zi ? this.zi : '') + '</td>'
-                    + '<td>' + (this.spouses ? this.spouses.join(',') : '') + '</td>'
-                    + '<td>' + (this.level + 12) + '</td>'
-                    + '</tr>');
-
-                //初始化节点状态
-                $tr.data('expand', false);
-
-                if (this.Level == maxLevel) {
-                    $tr.addClass('leaf');
-                }
-
-                if (isTr) {
-                    $container.after($tr);
-                    $container = $tr;
-                } else {
+            // 渲染族谱60字
+            var levelMap = json.levelMap;
+            var $container = $('.container');
+            var $row;
+            for (var i = 0; i < levelMap.length; i++) {
+                if (i % 5 == 0) {
+                    $tr = $('<div class="row"/>');
                     $container.append($tr);
                 }
-            });
-        }
-
-
-        var isLoad = true;
-        /**
-         * 刷新页面， 兼容弹窗请求回掉方法
-         */
-        function btnsearch() {
-            if (!isLoad) {
-                refresh();
+                var $cell = $('<span class="cell" data-level="' + i + '">' + levelMap[i] + '</span>');
+                $tr.append($cell)
             }
-            isLoad &= false;
-        }
+
+            $('.container').on('click', '.cell', function () {
+                window.location.href = 'person.html?level=' + $(this).data('level')
+            })
+        });
     </script>
 </body>
 
