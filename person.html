@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>刘氏族谱</title>
-    <link href="source/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .folder-open {
+            display: inline-block;
+            margin-right: 2px;
+            width: 20px;
+            height: 20px;
+            background: url(source/skin_icons.png) -40px -196px no-repeat;
+            vertical-align: middle;
+            text-indent: -999em;
+            text-indent: 0;
+        }
+
+        .folder-line {
+            display: inline-block;
+            margin-right: 2px;
+            width: 20px;
+            height: 20px;
+            background: url(source/skin_icons.png) -80px -196px no-repeat;
+            vertical-align: middle;
+            text-indent: -999em;
+            text-indent: 0;
+        }
+
+        .ltable th {
+            text-align: center;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="tabs-content toptable">
-        <table id="tbContainer" class="ltable">
+    <div class="container-fluid table-responsive">
+        <!--响应式表格，给table的父元素加，以移动设备为优先，如果内容不能完全显示，有滚动条-->
+        <!-- table格式 .table-bordered 加外边框 .table-hover 鼠标悬停效果 .table-striped 隔行换色效果 .table-condensed 变紧凑-->
+        <table id="tbContainer" class="table table-bordered table-hover ltable">
             <thead>
                 <tr>
                     <th>名称</th>
@@ -22,7 +59,12 @@
             <tbody></tbody>
         </table>
     </div>
+
     <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="source/zp.js"></script>
     <script type="text/javascript">
         function getQueryString(name) {
@@ -62,7 +104,7 @@
                 placeholder += '<span class="folder-line"></span>';
             }
             while (--level > 0) {
-                placeholder = '<span style="display: inline-block; width: 10px;"></span>' + placeholder;
+                placeholder = '<span style="display: inline-block; width: 30px;"></span>' + placeholder;
             }
             placeholderCache[index] = placeholder;
             return placeholder;
@@ -75,12 +117,14 @@
             var $tr = $('<tr data-level="' + data.level + '">'
                 + '<td align="left">'
                 + placeholder
-                + '<span class="folder-open"></span>' + data.name + '</td>'
-                + '<td>' + (data.zi ? data.zi : '') + '</td>'
+                + data.name
+                + (data.childrens ? '<span class="folder-open"></span>' : '')
+                + '</td>'
+                + '<td><small>' + (data.zi ? data.zi : '') + '</small></td>'
                 + '<td>' + (data.spouses ? data.spouses.join(',') : '') + '</td>'
-                + '<td>' + (json.levelMap[data.level - 1]) + "(" + data.level + ")" + '</td>'
-                + '<td>' + (data.childrens ? data.childrens.length : 0) + '人</td>'
-                + '<td>' + (data.remark ? data.remark : '') + '</td>'
+                + '<td><small>' + (json.levelMap[data.level - 1]) + "(" + data.level + ")" + '</small></td>'
+                + '<td><small>' + (data.childrens ? data.childrens.length : 0) + '人</small></td>'
+                + '<td><small>' + (data.remark ? data.remark : '') + '</small></td>'
                 + '</tr>');
 
             //初始化节点状态
@@ -88,9 +132,9 @@
                 .data('name', data.name);
             if (level != 1) {
                 $tr.css("display", "none")
+            } else {
+                $tr.addClass("info")
             }
-
-
 
             // if (this.Level == maxLevel) {
             //     $tr.addClass('leaf');
@@ -138,24 +182,25 @@
         function init() {
             $('#tbContainer tbody').on('click', 'tr:not(.leaf)', function () {
                 var $tr = $(this);
-                //树为闭合状态，则移除孩子节点
                 var pid = $tr.data('level');
                 var expand = $tr.data('expand');
                 $tr.data('expand', !expand);
-                console.log(expand)
                 while (true) {
                     $tr = $tr.next();
-                    console.log($tr.data('level') + $tr.data('name'));
-                    if ($tr.length > 0 && $tr.data('level') > pid) {
-                        //$tr.toggle();
-                        if (expand) {
-                            $tr.hide();
-                        } else {
-                            $tr.show();
-                        }
-                        $tr.data('expand', !expand);
-                    } else {
+                    if ($tr.length <= 0 || $tr.data('level') <= pid) {
                         break;
+                    }
+
+                    if (expand) {
+                        // 当前为展开状态，则所有孩子以及孩子的孩子都折叠
+                        $tr.hide();
+                        $tr.data('expand', false);
+                    } else {
+                        // 当前为折叠状态，只展开孩子节点
+                        if ($tr.data('level') - pid != 1) {
+                            continue;
+                        }
+                        $tr.show();
                     }
                 }
             });
