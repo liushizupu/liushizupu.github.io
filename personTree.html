@@ -31,6 +31,10 @@
             text-indent: 0;
         }
 
+        .ltable {
+            text-align: center;
+        }
+
         .ltable th {
             text-align: center;
         }
@@ -107,7 +111,7 @@
                 + '</td>'
                 + '<td><small>' + (data.zi ? data.zi : '') + '</small></td>'
                 + '<td>' + (data.spouses ? data.spouses.join(',') : '') + '</td>'
-                + '<td><small>' + (json.levelMap[data.level - 1]) + "(" + data.level + ")" + '</small></td>'
+                + '<td><small>' + (json.levelMap[data.level - 1]) + "(" + data.level + "世)" + '</small></td>'
                 + '<td><small>' + (data.childrens ? data.childrens.length : 0) + '人</small></td>'
                 + '<td><small>' + (data.remark ? data.remark : '') + '</small></td>'
                 + '</tr>');
@@ -217,66 +221,7 @@
             $('#tbContainer tbody').on("click", "a", function (e) {
                 e.stopPropagation();
             })
-        }
-
-        /**
-         * 区域数据解析
-         **
-         * @param {Array} data 区域数据对象集合
-         * @param {int} pid 容器id
-         */
-        function analysisAreaData(data, pid) {
-            if (data.length <= 0) {
-                return;
-            }
-
-            //判断新的tr新增方式
-            var isTr = true;
-            var $container = $('#tbContainer tr[data-id="' + pid + '"]');
-            if ($container.length <= 0) {
-                isTr = false;
-                $container = $('#tbContainer tbody');
-            }
-
-
-            //计算占位符
-            var curLevel = data[0].Level;
-            var placeholder = '';
-            if (curLevel > 1) {
-                placeholder += '<span class="folder-line"></span>';
-            }
-            while (--curLevel > 0) {
-                placeholder = '<span style="display: inline-block; width: 10px;"></span>' + placeholder;
-            }
-
-            //渲染
-            $.each(data, function () {
-
-
-                var $tr = $('<tr data-id="' + this.ID + '" data-pid="' + pid + '">'
-                    + '<td align="left">'
-                    + placeholder
-                    + '<span class="folder-open"></span>' + this.name + '</td>'
-                    + '<td>' + (this.zi ? this.zi : '') + '</td>'
-                    + '<td>' + (this.spouses ? this.spouses.join(',') : '') + '</td>'
-                    + '<td>' + (this.level + 12) + '</td>'
-                    + '</tr>');
-
-                //初始化节点状态
-                $tr.data('expand', false);
-
-                if (this.Level == maxLevel) {
-                    $tr.addClass('leaf');
-                }
-
-                if (isTr) {
-                    $container.after($tr);
-                    $container = $tr;
-                } else {
-                    $container.append($tr);
-                }
-            });
-        }
+        } 
     </script>
 </body>
 

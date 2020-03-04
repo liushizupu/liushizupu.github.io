@@ -30,13 +30,21 @@
     .cell:hover {
         color: red;
     }
+
+    .cell.disabled {
+        color: #888888;
+    }
+
+    .cell.disabled:hover {
+        color: #888888;
+    }
 </style>
 
 <body>
     <div class="container-fluid">
         <h1 class="page-header text-center">
-            <a href="personTree.html">刘氏族谱</a> 
-        </h2>
+            <a href="personTree.html">刘氏族谱</a>
+            </h2>
     </div>
     <div id="zpContainer" class="container">
 
@@ -54,12 +62,19 @@
                     $tr = $('<div class="row"/>');
                     $container.append($tr);
                 }
-                var $cell = $('<span class="cell" data-level="' + i + '">' + levelMap[i] + '</span>');
+                var $cell = $('<span class="cell'
+                    + (i >= 24 ? ' disabled' : '')
+                    + '" data-level="' + i + '">'
+                    + levelMap[i]
+                    + '</span>');
                 $tr.append($cell)
             }
 
             $('.container').on('click', '.cell', function () {
-                window.location.href = 'person.html?level=' + $(this).data('level')
+                var $cell = $(this);
+                if (!$cell.hasClass('disabled')) {
+                    window.location.href = 'person.html?level=' + $cell.data('level');
+                }
             })
         });
     </script>
