@@ -75,9 +75,8 @@
     </script>
 
     <script type="text/javascript">
-        var maxLevel = 2;   //声明最大层级
         var placeholderCache = [];
- 
+
 
         function calcPlaceholder(level) {
             var index = level;
@@ -100,7 +99,7 @@
             //debugger
             var placeholder = calcPlaceholder(level);
 
-            var $tr = $('<tr data-level="' + data.level + '">'
+            var $tr = $('<tr name="p' + data.id + '" data-level="' + data.level + '">'
                 + '<td align="left">'
                 + placeholder
                 + data.name
@@ -144,20 +143,48 @@
             }
         }
 
-        $(function () {          
+        $(function () {
+            init();
+
             var $container = $('#tbContainer tbody');
             for (var i = 0; i < json.persons.length; i++) {
                 render($container, json.persons[i], 1);
             }
 
-            var level = parseInt(getQueryString('level'));
-            if (level) {
+            var id = parseInt(getQueryString('id'));
+            if (id) {
+                // 全部隐藏
                 $container.find('tr').hide();
-                $container.find('tr[data-level="' + (level + 1) + '"]').show();
+
+                var $tr = $container.find('tr[name="p' + id + '"]');
+                // 定位指定行标记
+                $tr.addClass("danger");
+
+                var level = $tr.data('level');
+                var parentFlag = true;
+                // 显示祖先、兄弟节点
+                while (true) {
+                    $tr = $tr.prev();
+                    if (level < 0 || $tr.length <= 0) {
+                        break;
+                    }
+                    console.log($tr.data('name'))
+                    console.log($tr.data('level'))
+                    // if ($tr.data('level') == level) {
+                    //     continue;
+                    // }
+                    if ($tr.data('level') < level) {
+                        $tr.show();
+                        level--;
+
+                        if (parentFlag) {
+                            // 第一次出现父亲，触发点击事件，显示兄弟
+                            $tr.click();
+                            parentFlag = false;
+                        }
+                    }
+                }
             }
-
-            init();
-
         });
 
         function init() {
