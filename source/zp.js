@@ -5150,3 +5150,38 @@ var json = {
         }
     ]
 }
+
+function calcLevel(data, level) {
+    if (data.levelInitial) {
+        // 备份从13开始
+        data.level = data.levelInitial;
+    } else {
+        data.level = level;
+    }
+    if (!data.childrens) {
+        return;
+    }
+    for (var i = 0; i < data.childrens.length; i++) {
+        calcLevel(data.childrens[i], data.level + 1);
+    }
+}
+
+function calcId(data, id) {
+    data.id = id;
+    if (!data.childrens) {
+        return id;
+    }
+    for (var i = 0; i < data.childrens.length; i++) {
+        id = calcId(data.childrens[i], id + 1);
+    }
+    return id;
+}
+
+(function () {
+    var id = 0;
+    for (var i = 0; i < json.persons.length; i++) {
+        calcLevel(json.persons[i], 1);
+
+        id = calcId(json.persons[i], id + 1)
+    }
+})()

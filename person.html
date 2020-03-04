@@ -9,26 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
-        .folder-open {
-            display: inline-block;
-            margin-right: 2px;
-            width: 20px;
-            height: 20px;
-            background: url(source/skin_icons.png) -40px -196px no-repeat;
-            vertical-align: middle;
-            text-indent: -999em;
-            text-indent: 0;
-        }
-
-        .folder-line {
-            display: inline-block;
-            margin-right: 2px;
-            width: 20px;
-            height: 20px;
-            background: url(source/skin_icons.png) -80px -196px no-repeat;
-            vertical-align: middle;
-            text-indent: -999em;
-            text-indent: 0;
+        .ltable {
+            text-align: center;
         }
 
         .ltable th {
@@ -75,79 +57,19 @@
     </script>
 
     <script type="text/javascript">
-        var maxLevel = 2;   //声明最大层级
-        var placeholderCache = [];
-
-        function calcLevel(data, level) {
-            if (data.levelInitial) {
-                // 备份从13开始
-                data.level = data.levelInitial;
-            } else {
-                data.level = level;
-            }
-            if (!data.childrens) {
-                return;
-            }
-            for (var i = 0; i < data.childrens.length; i++) {
-                calcLevel(data.childrens[i], data.level + 1);
-            }
-        }
-
-        function calcPlaceholder(level) {
-            var index = level;
-            if (placeholderCache[index]) {
-                return placeholderCache[index];
-            }
-
-            var placeholder = '';
-            if (level > 1) {
-                placeholder += '<span class="folder-line"></span>';
-            }
-            while (--level > 0) {
-                placeholder = '<span style="display: inline-block; width: 30px;"></span>' + placeholder;
-            }
-            placeholderCache[index] = placeholder;
-            return placeholder;
-        }
-
         function render($container, data, level) {
-            //debugger
-            var placeholder = calcPlaceholder(level);
-
-            var $tr = $('<tr data-level="' + data.level + '">'
-                + '<td align="left">'
-                + placeholder
+            var $tr = $('<tr data-level="' + data.level + '" style="display:none">'
+                + '<td>'
+                + '<a href="personTree.html?id=' + data.id + '">'
                 + data.name
-                + (data.childrens ? '<span class="folder-open"></span>' : '')
-                + '</td>'
+                + '</a></td>'
                 + '<td><small>' + (data.zi ? data.zi : '') + '</small></td>'
                 + '<td>' + (data.spouses ? data.spouses.join(',') : '') + '</td>'
                 + '<td><small>' + (json.levelMap[data.level - 1]) + "(" + data.level + ")" + '</small></td>'
                 + '<td><small>' + (data.childrens ? data.childrens.length : 0) + '人</small></td>'
                 + '<td><small>' + (data.remark ? data.remark : '') + '</small></td>'
                 + '</tr>');
-
-            //初始化节点状态
-            $tr.data('expand', false)
-                .data('name', data.name);
-            if (level != 1) {
-                $tr.css("display", "none")
-            } else {
-                $tr.addClass("info")
-            }
-
-            // if (this.Level == maxLevel) {
-            //     $tr.addClass('leaf');
-            // }
-            if (!data.childrens) {
-                $tr.addClass('leaf');
-            }
-            // if (isTr) {
-            //     $container.after($tr);
-            //     $container = $tr;
-            // } else {
-            //     $container.append($tr);
-            // }
+            console.log(data.id)
             $container.append($tr);
 
             if (!data.childrens) {
@@ -159,10 +81,6 @@
         }
 
         $(function () {
-            for (var i = 0; i < json.persons.length; i++) {
-                calcLevel(json.persons[i], 1);
-            }
-
             var $container = $('#tbContainer tbody');
             for (var i = 0; i < json.persons.length; i++) {
                 render($container, json.persons[i], 1);
@@ -170,105 +88,10 @@
 
             var level = parseInt(getQueryString('level'));
             if (level) {
-                $container.find('tr').hide();
+                //$container.find('tr').hide();
                 $container.find('tr[data-level="' + (level + 1) + '"]').show();
             }
-
-            //getAreaList(0);
-            init();
-
-        });
-
-        function init() {
-            $('#tbContainer tbody').on('click', 'tr:not(.leaf)', function () {
-                var $tr = $(this);
-                var pid = $tr.data('level');
-                var expand = $tr.data('expand');
-                $tr.data('expand', !expand);
-                while (true) {
-                    $tr = $tr.next();
-                    if ($tr.length <= 0 || $tr.data('level') <= pid) {
-                        break;
-                    }
-
-                    if (expand) {
-                        // 当前为展开状态，则所有孩子以及孩子的孩子都折叠
-                        $tr.hide();
-                        $tr.data('expand', false);
-                    } else {
-                        // 当前为折叠状态，只展开孩子节点
-                        if ($tr.data('level') - pid != 1) {
-                            continue;
-                        }
-                        $tr.show();
-                    }
-                }
-            });
-
-            //阻止a标签冒泡事件
-            $('#tbContainer tbody').on("click", "a", function (e) {
-                e.stopPropagation();
-            })
-        }
-
-        /**
-         * 区域数据解析
-         **
-         * @param {Array} data 区域数据对象集合
-         * @param {int} pid 容器id
-         */
-        function analysisAreaData(data, pid) {
-            if (data.length <= 0) {
-                return;
-            }
-
-            //判断新的tr新增方式
-            var isTr = true;
-            var $container = $('#tbContainer tr[data-id="' + pid + '"]');
-            if ($container.length <= 0) {
-                isTr = false;
-                $container = $('#tbContainer tbody');
-            }
-
-
-            //计算占位符
-            var curLevel = data[0].Level;
-            var placeholder = '';
-            if (curLevel > 1) {
-                placeholder += '<span class="folder-line"></span>';
-            }
-            while (--curLevel > 0) {
-                placeholder = '<span style="display: inline-block; width: 10px;"></span>' + placeholder;
-            }
-
-            //渲染
-            $.each(data, function () {
-
-
-                var $tr = $('<tr data-id="' + this.ID + '" data-pid="' + pid + '">'
-                    + '<td align="left">'
-                    + placeholder
-                    + '<span class="folder-open"></span>' + this.name + '</td>'
-                    + '<td>' + (this.zi ? this.zi : '') + '</td>'
-                    + '<td>' + (this.spouses ? this.spouses.join(',') : '') + '</td>'
-                    + '<td>' + (this.level + 12) + '</td>'
-                    + '</tr>');
-
-                //初始化节点状态
-                $tr.data('expand', false);
-
-                if (this.Level == maxLevel) {
-                    $tr.addClass('leaf');
-                }
-
-                if (isTr) {
-                    $container.after($tr);
-                    $container = $tr;
-                } else {
-                    $container.append($tr);
-                }
-            });
-        }
+        }); 
     </script>
 </body>
 
