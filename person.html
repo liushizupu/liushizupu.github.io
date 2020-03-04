@@ -65,11 +65,10 @@
                 + '</a></td>'
                 + '<td><small>' + (data.zi ? data.zi : '') + '</small></td>'
                 + '<td>' + (data.spouses ? data.spouses.join(',') : '') + '</td>'
-                + '<td><small>' + (json.levelMap[data.level - 1]) + "(" + data.level + ")" + '</small></td>'
+                + '<td><small>' + (json.levelMap[data.level - 1]) + "(" + data.level + "世)" + '</small></td>'
                 + '<td><small>' + (data.childrens ? data.childrens.length : 0) + '人</small></td>'
                 + '<td><small>' + (data.remark ? data.remark : '') + '</small></td>'
                 + '</tr>');
-            console.log(data.id)
             $container.append($tr);
 
             if (!data.childrens) {
