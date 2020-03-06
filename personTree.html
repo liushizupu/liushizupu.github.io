@@ -57,7 +57,7 @@
                     <th>配偶</th>
                     <th>辈分</th>
                     <th>后人</th>
-                    <th>备注</th>
+                    <th style="max-width: 40%;">备注</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -102,7 +102,6 @@
         function render($container, data, level) {
             //debugger
             var placeholder = calcPlaceholder(level);
-
             var $tr = $('<tr name="p' + data.id + '" data-level="' + data.level + '">'
                 + '<td align="left">'
                 + placeholder
@@ -111,9 +110,9 @@
                 + '</td>'
                 + '<td><small>' + (data.zi ? data.zi : '') + '</small></td>'
                 + '<td>' + (data.spouses ? data.spouses.join(',') : '') + '</td>'
-                + '<td><small>' + (json.levelMap[data.level - 1]) + "(" + data.level + "世)" + '</small></td>'
+                + '<td><small>' + data.levelCaption + '</small></td>'
                 + '<td><small>' + (data.childrens ? data.childrens.length : 0) + '人</small></td>'
-                + '<td><small>' + (data.remark ? data.remark : '') + '</small></td>'
+                + '<td align="left"><small>' + (data.remark ? data.remark : '') + '</small></td>'
                 + '</tr>');
 
             //初始化节点状态

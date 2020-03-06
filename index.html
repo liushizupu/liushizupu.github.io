@@ -43,7 +43,7 @@
 <body>
     <div class="container-fluid">
         <h1 class="page-header text-center">
-            <a href="personTree.html">刘氏族谱</a>
+            <a href="personTree.html">刘氏族谱(七份)</a>
             </h2>
     </div>
     <div id="zpContainer" class="container">
@@ -57,6 +57,7 @@
             var levelMap = json.levelMap;
             var $container = $('#zpContainer');
             var $row;
+            var level = 1;
             for (var i = 0; i < levelMap.length; i++) {
                 if (i % 5 == 0) {
                     $tr = $('<div class="row"/>');
@@ -64,10 +65,20 @@
                 }
                 var $cell = $('<span class="cell'
                     + (i >= 24 ? ' disabled' : '')
-                    + '" data-level="' + i + '">'
+                    + '" data-level="' + level + '">'
                     + levelMap[i]
                     + '</span>');
                 $tr.append($cell)
+
+                if (levelMap[i] != '命') {
+                    // 命一两字合派
+                    level++;
+                }
+
+                if (levelMap[i] == '一') {
+                    // 命一两字合派
+                    $cell.addClass('disabled');
+                }
             }
 
             $('.container').on('click', '.cell', function () {

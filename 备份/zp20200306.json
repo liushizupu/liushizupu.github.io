@@ -1,4 +1,4 @@
-var json = {
+{
     "levelMap": "明世敬班甫瓊元其宗囯命一文士志光之曰正大紹祖存忠厚長傳積善家敦行為道德富貴定榮華修齊能達用學問可成名謹守詩書訓方穪奎壁英",
     "persons": [
         {
@@ -5979,47 +5979,3 @@ var json = {
         }
     ]
 }
-
-function calcLevelCaption(level) {
-    if (level <= 0) {
-        return '';
-    }
-
-    var add = -1;
-    if (level > 11) {
-        add = 0;
-    }
-    return json.levelMap[level + add] + "(" + level + "世)";
-}
-
-function calcLevel(data, level) {
-    data.level = level;
-    data.levelCaption = calcLevelCaption(level);
-    if (!data.childrens) {
-        return;
-    }
-    for (var i = 0; i < data.childrens.length; i++) {
-        calcLevel(data.childrens[i], data.level + 1);
-    }
-}
-
-function calcId(data, id) {
-    data.id = id;
-    if (!data.childrens) {
-        return id;
-    }
-    for (var i = 0; i < data.childrens.length; i++) {
-        id = calcId(data.childrens[i], id + 1);
-    }
-    return id;
-}
-
-
-(function () {
-    var id = 0;
-    for (var i = 0; i < json.persons.length; i++) {
-        calcLevel(json.persons[i], json.persons[i].levelInitial);
-
-        id = calcId(json.persons[i], id + 1)
-    }
-})()
